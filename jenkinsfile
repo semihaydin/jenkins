@@ -1,0 +1,12 @@
+pipeline {
+node {
+        stage('Execute NetsparkerCloud') {
+             step([$class: 'NCScanBuilder', 
+             ncApiToken: 'VrfI3xho/SLY+Uxq2fnOB9LLcrq8T2Ao8CareBCmW6E=',
+             ncServerURL: 'https://stage-aws.netsparkercloud.com', 
+             ncScanType: 'FullWithPrimaryProfile', 
+             ncWebsiteId: '8bc675d0-5757-4e88-7765-a7ca01b15cc8', 
+             ncProfileId: '190f1004-74c0-4a31-a2b5-a97c0204ad53'])
+        }
+    
+}
